@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Weather Data</title>
+</head>
+<body>
+    <h1>Weather Data Washington DC</h1>
+    <table border="1">
+        <tr>
+            <th>Date</th>
+            <th>Temperature (°F)</th>
+        </tr>
+        {% for row in weather_data.iterrows() %}
+        <tr>
+            <td>{{ row[1]['date'] }}</td>
+            <td>{{ row[1]['temperature_2m'] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
